@@ -1,27 +1,18 @@
 import React, { useState } from 'react';
 
 function UserProfile() {
-  // State for managing the user's name
   const [name, setName] = useState('John Doe');
-
-  // State for managing the user's age
   const [age, setAge] = useState(25);
 
-  // State for tracking the input values without immediately updating the state
   const [tempName, setTempName] = useState(name);
   const [tempAge, setTempAge] = useState(age);
 
-  // State for tracking whether an update has been made
   const [isUpdated, setIsUpdated] = useState(false);
 
   // Function to handle the update when the "Update" button is clicked
   const handleUpdate = () => {
-    // Perform the update logic
-    // For simplicity, we'll just set a flag to indicate an update
     setIsUpdated(true);
 
-    // You can perform additional update logic here (e.g., API call)
-    // For now, let's set the updatedName and updatedAge
     setName(tempName);
     setAge(tempAge);
   };
