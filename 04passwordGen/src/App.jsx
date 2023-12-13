@@ -10,6 +10,7 @@ function App() {
  //useRef hook
  const passwordREf=useRef(null)
 
+ //function for passGen working and useCallback is for optimization
  const passwordGenerator= useCallback(()=>{
     let pass="";
     let str="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -24,8 +25,8 @@ function App() {
       pass +=str.charAt(char);
     }
     setpassword(pass);
-
  },[length,takeNum,takeChar,setpassword])
+
 
  useEffect(()=>{
     passwordGenerator();
